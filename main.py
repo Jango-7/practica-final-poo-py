@@ -1,3 +1,5 @@
+# Funciones para la interfaz de la consola
+
 from clases.cliente import Cliente
 from clases.inventario import Inventario
 from clases.mascota import Gato, Perro
@@ -51,6 +53,7 @@ def registrar_producto():
 def registrar_venta(clientes, inventario):
     nombre_cliente = input("Nombre del cliente: ")
     cliente = next((c for c in clientes if c.nombre == nombre_cliente), None)
+    '''La función next() en Python se utiliza para obtener el siguiente elemento de un iterador (como los generadores, objetos map, filter, o iteradores personalizados). Su propósito principal es avanzar manualmente en la iteración, consumiendo un elemento cada vez que se llama.'''
     if not cliente:
         print("Cliente no encontrado")
         return

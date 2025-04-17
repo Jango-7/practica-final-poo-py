@@ -15,13 +15,16 @@ class Mascota:
             self.precio = precio
     
     def mostrar_info(self):
+        # Se muestra la info que se agrego en actualizar_info
         return f'Mascota: {self.nombre}, Edad: {self.edad}, Salud: {self.salud}, Precio: {self.precio}'
 
 # CLASES QUE HEREDAN DE MASCOTA:
 
 class Perro(Mascota):
     def __init__(self, nombre, edad, salud, precio, raza, energia):
+        # Se agrega super para poder pasarle esto a la clase de la que hereda
         super().__init__(nombre, edad, salud, precio)
+        # Luego los dos que son propios de perro, se agregan aca. 
         self.raza = raza
         self.energia = energia
     
